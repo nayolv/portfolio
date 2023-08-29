@@ -1,60 +1,91 @@
 .window-container {
     display: flex;
     flex-direction: column;
-    background-color: #F9F3E5;
     width: 100%;
     height: 80%;
     border: 3px solid #000;
 
-    &__folder-toolbar {
-        background-color: #FEC880;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 35px;
-        padding: 0 10px;
+    .folder-container {
+        &__folder-toolbar {
+            background-color: #FEC880;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 35px;
+            padding: 0 10px;
+            border-bottom: 3px solid #000;
 
-        .toolbar-text-container {
-            font-size: 25px;
-            font-weight: bolder;
+            .toolbar-text-container {
+                font-size: 25px;
+                font-weight: bolder;
+            }
+
+            .toolbar-btns-container {
+                display: flex;
+                gap: 10px;
+
+
+                .folder-icon {
+                    background-color: #FFF;
+                    display: flex;
+                    border: 2px solid #000;
+                    width: 20px;
+                    height: 20px;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .folder-icon:nth-child(1) {
+                    align-items: flex-end;
+                    padding-bottom: 3px;
+
+                    div {
+                        border-bottom: 2px solid #000;
+                        width: 13px;
+                    }
+                }
+
+                .folder-icon:nth-child(2) {
+                    div {
+                        width: 13px;
+                        height: 13px;
+                        border: 1px solid #000;
+                        border-top: 4px solid #000;
+                    }
+                }
+
+                .folder-icon:nth-child(3) {
+                    font-weight: bolder;
+                }
+            }
         }
 
-        .toolbar-btns-container {
+        &__path {
             display: flex;
-            gap: 10px;
+            justify-content: space-between;
 
-
-            .folder-icon {
-                background-color: #FFF;
-                display: flex;
+            .url {
+                width: 40%;
                 border: 2px solid #000;
-                width: 20px;
-                height: 20px;
-                justify-content: center;
-                align-items: center;
+                margin: 10px;
+                padding: 7px;
             }
 
-            .folder-icon:nth-child(1) {
-                align-items: flex-end;
-                padding-bottom: 3px;
+            .search {
+                width: 200px;
+                border: 2px solid #000;
+                margin: 10px;
 
-                div {
-                    border-bottom: 2px solid #000;
-                    width: 13px;
+                input {
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    padding-left: 10px;
                 }
-            }
 
-            .folder-icon:nth-child(2) {
-                div {
-                    width: 13px;
-                    height: 13px;
-                    border: 1px solid #000;
-                    border-top: 4px solid #000;
+                input:focus {
+                    outline: none;
                 }
-            }
-
-            .folder-icon:nth-child(3) {
-                font-weight: bolder;
             }
         }
     }
@@ -66,6 +97,7 @@
         align-items: center;
         height: 40px;
         padding: 0 10px;
+        border-bottom: 3px solid #000;
 
         .toolbar-btns-container {
             display: flex;
@@ -92,10 +124,11 @@
     }
 
     &__content {
-        border-top: 3px solid #000;
         display: flex;
+        height: 100%;
         overflow: auto;
-
+        justify-content: center;
+        align-items: center;
     }
 
     box-shadow: 12px 10px 0px -3px rgba(0, 0, 0, 0.69);
@@ -106,7 +139,18 @@
 @media only screen and (max-width: 767px) {
     .window-container {
 
-        &__content {}
+        .folder-container {
+            &__folder-toolbar {
+                .toolbar-text-container {}
+
+            }
+        }
+
+        &__toolbar {
+            .toolbar-text-container {
+                font-size: 25px;
+            }
+        }
     }
 
 }

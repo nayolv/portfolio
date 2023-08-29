@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 export const About = () => {
     const navigate = useNavigate();
     return (
-        <Window title="Acerca de mí" type="web">
+        <Window title="Acerca de mí" type="web" backgroundColor="#F9F3E5">
             <div className="about-principal-container">
                 <div className="about-me-container">
                     <div className="about-me-container__images">
@@ -22,7 +22,7 @@ export const About = () => {
                     <div className="about-me-container__description">
                         <div>
                             <h1>Nayelli Olvera</h1>
-                            <h2>Desarrolladora Frond End</h2>
+                            <h2>Desarrolladora Front End</h2>
                             <div className="overflow-text">
                                 <p>
                                     ¡Hola a todos ! Soy una apasionada Desarrolladora Front End
@@ -39,12 +39,11 @@ export const About = () => {
                                     seguir contribuyendo al mundo del desarrollo web, aportando mi
                                     granito de arena para crear aplicaciones que dejen a todos con
                                     la boca abierta. ¡Estoy entusiasmada por lo que el futuro
-                                    depara y cómo puedo seguir haciendo que la web sea un lugar
-                                    mejor y más hermoso !
+                                    depara!
                                 </p>
                             </div>
+                            <button onClick={() => navigate("/contact")}>Contacto</button>
                         </div>
-                        <button onClick={() => navigate("/contact")}>Contacto</button>
                     </div>
                 </div>
             </div>

@@ -2,25 +2,26 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
 
     .about-me-container {
         display: flex;
-        width: 100%;
         height: 100%;
-        // height: 80vh;
+        align-items: center;
+        justify-content: center;
 
         &__images {
             display: flex;
             width: 40%;
+            height: 90%;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             padding-left: 2rem;
-            margin-top: 1rem;
 
             div {
                 width: 100%;
-                height: 80%;
+                height: 100%;
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
@@ -51,44 +52,31 @@
         }
 
         &__description {
+            height: 90%;
             width: 60%;
+            padding: 0 20px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
 
             div {
-                width: 80%;
-                height: 80%;
                 display: flex;
+                height: 100%;
                 flex-direction: column;
-
-                h1 {
-                    margin-bottom: 1rem;
-                    font-size: 50px;
-                }
-
-                h2 {
-                    font-size: 30px;
-                    margin-bottom: 1rem;
-                }
-
-                p {
-                    font-size: 20px
-                }
+                align-items: center;
+                justify-content: center;
 
                 .overflow-text {
                     background-color: #fff8f7;
                     width: 100%;
+                    height: 50%;
                     overflow-y: scroll;
                     border: 3px solid #000;
-                    max-height: 70%;
                     padding: 1rem;
                 }
             }
 
             button {
-                margin-top: 1rem;
+                margin-top: 10px;
                 width: 170px;
                 height: 50px;
                 background-color: #fff8f7;
@@ -103,21 +91,19 @@
 
 @media only screen and (max-width: 767px) {
     .about-principal-container {
-
+        height: 90%;
 
         .about-me-container {
-            width: 100%;
-
             flex-direction: column;
 
             &__images {
-                width: 100%;
                 padding: 0 10px;
+                width: 100%;
 
                 div {
+                    margin-top: 10px;
                     flex-direction: row;
-                    justify-content: space-between;
-                    padding: 1.5rem;
+                    padding: 10px;
 
                     .floating-img {
                         width: 70px;
@@ -128,26 +114,16 @@
 
             &__description {
                 width: 100%;
+                margin: 0;
                 padding: 0 10px;
-                justify-content: start;
-                margin-top: 2rem;
 
                 div {
-                    h1 {
-                        font-size: 40px;
-                    }
 
-                    h2 {
-                        font-size: 25px;
-                    }
 
-                    width: 100%;
-                    height: 100vh;
+                    // height: 100vh;
                 }
 
-                button {
-                    margin: 10px
-                }
+                button {}
             }
         }
     }

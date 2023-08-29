@@ -1,0 +1,45 @@
+.tech-container {
+    border: 2px solid #000;
+    height: 90%;
+    width: 95%;
+
+    &__images {
+        display: flex;
+        flex-wrap: wrap;
+
+        .image-container {
+            cursor: pointer;
+            margin: 10px 0;
+
+            a {
+                text-decoration: none;
+            }
+
+            .border-photo {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 10px;
+                padding: 15px;
+                width: 140px;
+                border: 1px solid #000;
+
+            }
+
+            p {
+                text-align: center;
+            }
+
+            img {
+                height: 70px;
+            }
+
+            transition: transform 0.3s ease;
+        }
+
+        .image-container:hover {
+            transform: scale(1.05);
+        }
+    }
+}
