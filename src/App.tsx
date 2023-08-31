@@ -6,19 +6,21 @@ import { Shortcuts } from './components/Shortcuts/Shortcuts';
 function App() {
 
   return (
-    <Shortcuts>
-      <Routes>
-        {routes.map((route) =>
-          <Route
-            key={route.path}
-            path={route.path}
-            element={
-              <route.component />
-            }
-          />)}
-      </Routes>
-    </Shortcuts>
+    <>
+      <Shortcuts>
+        <Routes>
+          {routes.map((route) =>
+            <Route
+              key={route.path}
+              path={route.path}
+              element={
+                <route.component />
+              }
+            />)}
+        </Routes>
+      </Shortcuts>
 
+    </>
   )
 }
 

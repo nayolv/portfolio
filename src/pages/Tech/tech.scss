@@ -1,45 +1,87 @@
 .tech-container {
+    display: flex;
+    justify-content: center;
     border: 2px solid #000;
     height: 90%;
     width: 95%;
 
     &__images {
-        display: flex;
-        flex-wrap: wrap;
+        width: 95%;
+        margin-top: 1rem;
 
-        .image-container {
-            cursor: pointer;
-            margin: 10px 0;
+        div {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
 
-            a {
-                text-decoration: none;
+            .image-container {
+                cursor: pointer;
+                transition: transform 0.3s ease;
+
+                .border-photo {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 10px;
+                    width: 130px;
+                    border: 1px solid #000;
+                }
+
+                .border-folder {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 15px;
+                    width: 140px;
+                }
+
+                a {
+                    text-decoration: none;
+                }
+
+                p {
+                    text-align: center;
+                }
+
+                img {
+                    height: 70px;
+                }
+
             }
-
-            .border-photo {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                margin: 10px;
-                padding: 15px;
-                width: 140px;
-                border: 1px solid #000;
-
-            }
-
-            p {
-                text-align: center;
-            }
-
-            img {
-                height: 70px;
-            }
-
-            transition: transform 0.3s ease;
         }
 
         .image-container:hover {
             transform: scale(1.05);
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .tech-container {
+        overflow-y: scroll;
+        height: 95%;
+
+        &__images {
+
+            div {
+                justify-content: center;
+
+                .image-container {
+                    .border-photo {
+                        width: 120px;
+                    }
+
+                    img {
+                        height: 50px;
+                    }
+                }
+
+                .image-container:last-child {
+                    margin-bottom: 20px;
+                }
+            }
         }
     }
 }

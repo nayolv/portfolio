@@ -6,8 +6,9 @@
     border: 3px solid #000;
 
     .folder-container {
+
         &__folder-toolbar {
-            background-color: #FEC880;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -63,6 +64,7 @@
         &__path {
             display: flex;
             justify-content: space-between;
+            background-color: #FFF;
 
             .url {
                 width: 40%;
@@ -91,7 +93,6 @@
     }
 
     &__toolbar {
-        background-color: #B0F0FB;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -138,11 +139,24 @@
 
 @media only screen and (max-width: 767px) {
     .window-container {
-
         .folder-container {
             &__folder-toolbar {
                 .toolbar-text-container {}
 
+            }
+
+            &__path {
+                flex-direction: column;
+                padding-right: 20px;
+
+                .url {
+                    width: 100%;
+                }
+
+                .search {
+                    width: 100%;
+                    height: 35px;
+                }
             }
         }
 
@@ -151,6 +165,8 @@
                 font-size: 25px;
             }
         }
+
+        &__content {}
     }
 
 }

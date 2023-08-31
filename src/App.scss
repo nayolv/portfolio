@@ -7,7 +7,15 @@
     font-family: 'Jura', sans-serif;
 }
 
-body {}
+body {
+    background-image: url("./assets/img/retro.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+footer {
+    background-color: red;
+}
 
 ::-webkit-scrollbar {
     width: 10px;

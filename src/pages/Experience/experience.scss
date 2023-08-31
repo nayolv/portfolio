@@ -1,0 +1,73 @@
+.experience-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .card-container {
+        width: 330px;
+        overflow-y: scroll;
+        border: 3px solid #000;
+        padding: 10px;
+
+        &__text {
+            margin-bottom: 10px;
+
+            p {
+                margin: 0;
+                padding: 0;
+                font-weight: bolder;
+            }
+
+            .text-time {
+                font-size: 13px;
+            }
+
+            .text-link {
+                text-decoration: none;
+                font-size: 17px;
+                --c: #A286FF;
+                --s: .15em;
+                font-weight: bold;
+                color: #000;
+                line-height: 1.1em;
+                padding-bottom: calc(2.1*var(--s));
+                background:
+                    conic-gradient(from 135deg at top, var(--c) 90deg, #0000 0) left 0 bottom var(--s)/calc(2*var(--s)) var(--s) repeat-x,
+                    conic-gradient(from -45deg at bottom, var(--c) 90deg, #0000 0) bottom 0 left var(--s)/calc(2*var(--s)) var(--s) repeat-x;
+                --_m:
+                    linear-gradient(#000 0 0) content-box,
+                    linear-gradient(#000 0 0) 50%/var(--_p, 0%) padding-box no-repeat;
+                -webkit-mask: var(--_m);
+                mask: var(--_m);
+                transition: .5s;
+            }
+
+            .text-link:hover {
+                --_p: 100%;
+                color: var(--c);
+            }
+        }
+
+        &__description {
+            padding: 0 20px;
+            text-align: justify;
+
+            span {
+                display: inline-block;
+                font-size: 14px;
+                animation: rotate 3s linear infinite;
+                margin-left: -20px;
+            }
+        }
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
